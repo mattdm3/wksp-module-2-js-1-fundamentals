@@ -159,14 +159,14 @@ Of course comparison operators and logical operators are usually combined in an 
 ```js
 // Look at these expressions below and determine whether they evaluate to true or false
 
-1. true || false
-2. false && false
-3. 1 < 2 && 2 > 1
-4. 31 < 13 || 1 < 2 && 3 > 1
-5. 400 <= 400 && 399 < 400 && (30 > 31 || 400 > 31)
-6. true && false && false || false && true
-7. true && false || true || false
-8. true && false && false || false && true ? true && false && false || false && true : 1 < 2 && 2 > 1
+1. true || false TRUE
+2. false && false FALSE
+3. 1 < 2 && 2 > 1 TRUE
+4. 31 < 13 || 1 < 2 && 3 > 1 TRUE
+5. 400 <= 400 && 399 < 400 && (30 > 31 || 400 > 31) TRUE
+6. true && false && false || false && true  FALSE
+7. true && false || true || false TRUE
+8. true && false && false || false && true ? true && false && false || false && true : 1 < 2 && 2 > 1 TRUE
 ```
 
 ---
@@ -293,9 +293,9 @@ Given this data structure:
 let data = [0, [], [], [1,2,3, [4]]]
 ```
 
-1. How would you access the value `0`?
-2. How would you access the value `3`?
-3. How would you access the value `4`?
+1. How would you access the value `0`? data[0]
+2. How would you access the value `3`? data[3][2]
+3. How would you access the value `4`? data[3][3][0]
 
 ---
 
@@ -341,6 +341,8 @@ Group the following items together according to their type:
 - List the number of properties for each object.
 - For each property, indicate its name and its value.
 - For each property value, indicate the type.
+--
+- NOTE: **3 things: Property, key and value (Property is KEY AND VALUE COMBINED)**
 
 ```js
 { label: 'corn', price: 5.3 + '$' };
@@ -374,9 +376,9 @@ let person = {name: 'Bob', age: 23};
 let name = 'John';
 
 // What is the value of the following expressions?
-1. person.name
-2. person['name']
-3. person[name]
+1. person.name BOB
+2. person['name'] BOB
+3. person[name] UNDEFINED
 
 ```
 
@@ -391,9 +393,9 @@ let person = {name: 'bob', age: 23};
 let key = 'name';
 
 // What is the value of the following expressions:
-1. person.key
-2. person['key']
-3. person[key]
+1. person.key UNDEFINED
+2. person['key'] UNDEFINED
+3. person[key] BOB
 
 ```
 

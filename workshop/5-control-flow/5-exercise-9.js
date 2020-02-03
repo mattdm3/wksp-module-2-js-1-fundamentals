@@ -17,3 +17,15 @@
 // _#_#_#_#
 // #_#_#_#_
 // _#_#_#_#
+
+let odd = "#_#_#_#_";
+let even = "_#_#_#_#";
+
+for (i = 1; i < 9; i++) {
+
+    if (i % 2 === 0) {
+        console.log(even);
+
+    } else console.log(odd);
+
+}
